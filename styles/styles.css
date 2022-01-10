@@ -53,6 +53,7 @@ header {
   padding-top: 24px;
   padding-bottom: 25px;
 }
+
 .logo {
   margin-right: 93px;
 }
@@ -635,9 +636,12 @@ footer {
   padding-bottom: 60px;
 }
 
+.footer {
+  display: flex;
+}
 
 .f-address {
-  display: inline-block;
+  display: flex;
 }
 
 .footer-logo-title {
@@ -686,10 +690,9 @@ footer {
 }
 
 .join-us {
-  display: inline-block;
+  display: flex;
   margin-left: 70px;
-  width: 206px;
-  margin-bottom: auto;
+  flex-direction: column;
 }
 
 .joinusheader {
@@ -707,9 +710,7 @@ footer {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  
   margin-top: 20px;
- margin-right: 0;
 }
 
 .footer-sm-link {
