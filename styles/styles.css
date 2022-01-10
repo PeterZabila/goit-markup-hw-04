@@ -378,25 +378,33 @@ header {
 
 /* SOCIAL MEDIA */
 .sm-list {
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   margin-top: 16px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.sm-item {
-  display: inline-flex;
-  justify-content: space-around;
+.sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: inherit;
+  padding: 0;
 }
 
-/* .sm-item:hover {
+.sm-link:hover {
   background-color: var(--second-font-color);
-} */
+}
 
+.sm-item {
+  display: flex;
+  flex-direction: row;
+}
 
 .sm-svg {
   fill: #AFB1B8;
@@ -405,8 +413,29 @@ header {
   align-items: center;
 }
 
+.sm-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+/* .sm-item {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.sm-item:hover {
+  background-color: var(--second-font-color);
+  fill: white;
+} */
+
+
 .sm-svg:hover {
   fill: white;
+  background-color: var(--second-font-color);
 }
 
 .sm-item .instagram {
@@ -428,12 +457,6 @@ header {
   width: 20px;
   height: 20px;
 }
-
-.sm-svg:hover {
-  fill: var(--second-font-color);
-}
-
-
 
 
 /* CLIENTS SECTION */
@@ -462,33 +485,39 @@ header {
   display: flex;
 }
 
-/* .clients-box {
+.clients-box {
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-} */
+}
 
-.clients-item {
-  fill:  #AFB1B8;
-  display: flex;
-  width: 170px;
-  height: 92px;
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
+.clients-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-item:hover {
+.clients-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill:  #AFB1B8;
+  width:106px;
+  height: 60px;
+}
+
+.clients-icon:hover {
   fill: var(--second-font-color);
+}
+
+.clients-box:hover {
   border: 1px solid var(--second-font-color);
 }
 
-.clients-box:not(:last-child) {
-  margin-right: 30px;
-}
+
+
 
 /* PORTFOLIO FILTER SECTION */
 .filter {
@@ -606,8 +635,14 @@ footer {
   padding-bottom: 60px;
 }
 
+
+.f-address {
+  display: inline-block;
+}
+
 .footer-logo-title {
   text-decoration: none;
+  font-style: normal;
   display: block;
   margin-bottom: 20px;
   font-family: Raleway;
@@ -618,6 +653,7 @@ footer {
 
 .footer-logo-span {
   color: white;
+  font-style: none;
 }
 
 .footer-address {
@@ -647,4 +683,92 @@ footer {
 
 .footer-mail {
   margin-bottom: 9px;
+}
+
+.join-us {
+  display: inline-block;
+  margin-left: 70px;
+  width: 206px;
+  margin-bottom: auto;
+}
+
+.joinusheader {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+/* FOOTER SOCAIL MEDIA */
+
+.footer-sm-list {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  
+  margin-top: 20px;
+ margin-right: 0;
+}
+
+.footer-sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--base-font-color);
+  padding: 0;
+}
+
+.footer-sm-link:hover {
+  background-color: var(--second-font-color);
+}
+
+.footer-sm-item {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.footer-sm-svg {
+  fill: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-sm-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-sm-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-sm-svg:hover {
+  fill: white;
+  background-color: var(--second-font-color);
+}
+
+.footer-sm-item .instagram {
+  width: 16.86px;
+  height: 16.86px;
+}
+
+.footer-sm-item .twitter {
+  width: 20px;
+  height: 16.25px;
+}
+
+.footer-sm-item .facebook {
+  width: 10px;
+  height: 20px;
+}
+
+.footer-sm-item .linkedin {
+  width: 20px;
+  height: 20px;
 }
