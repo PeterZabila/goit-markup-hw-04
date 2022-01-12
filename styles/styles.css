@@ -53,7 +53,6 @@ header {
   padding-top: 24px;
   padding-bottom: 25px;
 }
-
 .logo {
   margin-right: 93px;
 }
@@ -106,7 +105,7 @@ header {
   line-height: 1.17;
 }
 
-.nav-link.studio:active {
+.nav-link:hover, .nav-link:active {
   color: var(--second-font-color);
 }
 
@@ -119,15 +118,6 @@ header {
   font-weight: 500;
 }
 
-/* .contact-mail::before {
-  display: inline-block;
-  width: 16px;
-  height: 10px;
-  background-image: url(./images/port4.jpg);
-  background-color: #fff;
-  fill: currentColor;
-} */
-
 .envelope {
   fill: var(--base-font-color);
   width: 16px;
@@ -135,6 +125,10 @@ header {
   margin-right: 10px;
   padding: 0;
   align-items: baseline;
+}
+
+.contact-mail:hover .envelope, .contact-mail:active .envelope {
+  fill: currentColor;
 }
 
 .cell {
@@ -146,7 +140,7 @@ header {
   align-items: baseline;
 }
 
-.envelope:hover {
+.contact-tel:hover .cell, .contact-tel:active .cell {
   fill: currentColor;
 }
 
@@ -155,16 +149,21 @@ header {
 }
 
 .contact-mail:hover,
-.contact-mail:focus {
+.contact-mail:focus, .contact-tel:hover, .contact-tel:focus {
   color: var(--second-font-color);
 }
 
+
+
 .hero {
-  /* max-width: 1600px; */
-  background-image: url(../images/img.jpg);
+  background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4), 
+                    rgba(47, 48, 58, 0.4)
+  ),
+  url(../images/hero.jpg);
+  background-color: rgba(47, 48, 58, 0.4);
   background-repeat: no-repeat;
   background-size: 1600px;
-  background-color: rgba(47, 48, 58, 0.4);
   background-position: center;
   height: 600px;
   padding-top: 200px;
