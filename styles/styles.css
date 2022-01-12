@@ -128,7 +128,7 @@ header {
 }
 
 .contact-mail:hover .envelope, .contact-mail:active .envelope, .contact-mail:focus .envelope {
-  fill: currentColor;
+  fill: var(--second-font-color); 
 }
 
 .cell {
@@ -492,7 +492,7 @@ header {
 }
 
 .clients-box:hover .clients-icon, .clients-box:active .clients-icon, .clients-box:focus .clients-icon {
-  fill: currentColor;
+  fill: var(--second-font-color);
 }
 
 .clients-box:hover, .clients-box:active, .clients-box:focus {
