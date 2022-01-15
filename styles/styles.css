@@ -103,6 +103,7 @@ header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover, .nav-link:active, .nav-link:focus {
@@ -116,6 +117,7 @@ header {
   font-size: 14px;
   line-height: 1.17;
   font-weight: 500;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .envelope {
@@ -125,6 +127,7 @@ header {
   margin-right: 10px;
   padding: 0;
   align-items: baseline;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-mail:hover .envelope, .contact-mail:active .envelope, .contact-mail:focus .envelope {
@@ -138,6 +141,7 @@ header {
   margin-right: 10px;
   padding: 0;
   align-items: baseline;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-tel:hover .cell, .contact-tel:active .cell, .contact-tel:focus .cell {
@@ -198,12 +202,13 @@ header {
   border-radius: 4px;
   margin-top: 30px;
   padding: 10px 30px;
-}
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
 
-.button:hover {
-  background-color: #188ce8;
+.button:hover, .button:focus {
+  background-color: #188CE8;
 }
-
+ 
 /* ADVANTAGES SECTION */
 
 .advant-svg {
@@ -398,6 +403,7 @@ header {
   height: 44px;
   border-radius: 50%;
   padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sm-link:hover, .sm-link:active, .sm-link:focus {
@@ -406,9 +412,11 @@ header {
 
 .sm-svg {
   fill: #AFB1B8;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sm-item:not(:last-child) {
@@ -476,6 +484,7 @@ header {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: var(--second-font-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:not(:last-child) {
@@ -489,6 +498,7 @@ header {
   fill:  #AFB1B8;
   width:106px;
   height: 60px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-box:hover .clients-icon, .clients-box:active .clients-icon, .clients-box:focus .clients-icon {
@@ -528,11 +538,7 @@ header {
   border-radius: 4px;
   border-color: transparent;
   padding: 6px 22px;
-}
-
-.filter-button.all:active {
-  background-color: var(--second-font-color);
-  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-item {
@@ -574,6 +580,7 @@ header {
   flex-direction: column;
   outline: 1px solid #eeeeee;
   box-sizing: border-box;
+  transition:  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover {
@@ -702,6 +709,7 @@ footer {
   border-radius: 50%;
   background-color: #45454f;
   padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-sm-link:hover, .footer-sm-link:focus, .footer-sm-link:active {
@@ -719,6 +727,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-sm-svg:hover, .footer-sm-svg:focus, .footer-sm-svg:active {
+  fill: white;
+  background-color: var(--second-font-color);
 }
 
 .footer-sm-link:not(:last-child) {
@@ -727,11 +741,6 @@ footer {
 
 .footer-sm-item:not(:last-child) {
   margin-right: 10px;
-}
-
-.footer-sm-svg:hover, .footer-sm-svg:focus, .footer-sm-svg:active {
-  fill: white;
-  background-color: var(--second-font-color);
 }
 
 .footer-sm-item .instagram {
@@ -763,7 +772,13 @@ footer {
   height: 100vh;
   background-color: rgba(135, 126, 131, 0.8);
   display: flex;
+  transition: opacity 500ms, visibility 500ms;
 }
+
+.backdrop.is-hidden .modal {
+  transform: scale(0.5);
+}
+
 .modal {
   width: 500px;
   min-height: 500px;
@@ -771,8 +786,9 @@ footer {
   top: 50%;
   left: 50%;
   border-radius: 5px;;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   background-color: #fff;
+  transition: transform 500ms;
 }
 
 .modal-close {
@@ -791,4 +807,10 @@ footer {
 
 .modal-text {
   padding: 40px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
